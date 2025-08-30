@@ -13,10 +13,15 @@
 #include "zmk-helpers/key-labels/eyelash42.h"
 
 
-#define KEYS_L LT0 LT1 LT2 LT3 LT4 LM0 LM1 LM2 LM3 LM4 LB0 LB1 LB2 LB3 LB4
-#define KEYS_R RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4
+#define KEYS_L LT0 LT1 LT2 LT3 LT4 LT5 LM0 LM1 LM2 LM3 LM4 LM5 LB0 LB1 LB2 LB3 LB4 LB5
+#define KEYS_R RT0 RT1 RT2 RT3 RT4 RT5 RM0 RM1 RM2 RM3 RM4 RM5 RB0 RB1 RB2 RB3 RB4 RB5
 #define KEYS_T LH2 LH1 LH0 RH0 RH1 RH2
 #define KEYS_J JS0 JS1 JS2 JS3 JS4 LEC
+
+#define LT_TAPPING_TERM 200
+#define HM_TAPPING_TERM 200
+#define HM_TAPPING_TERM_FAST 150
+#define HM_PRIOR_IDLE 100
 
 // Make sure this file is included before all other files
 
@@ -25,7 +30,7 @@
  */
 &lt {
     // Increase layer tap time
-    tapping-term-ms = <300>;
+    tapping-term-ms = <LT_TAPPING_TERM>;
 
     // Quickly tap-tap-holding the lt button will repeat the tap behavior
     // For example enter-enter-hold, will output multiple enter while you
@@ -65,9 +70,6 @@
     };
 #endif
 
-#define HM_TAPPING_TERM 300
-#define HM_TAPPING_TERM_FAST 200
-#define HM_PRIOR_IDLE 150
 
 / {
 
@@ -88,7 +90,6 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&kp>,  <&kp>;
-
             flavor = "balanced";
             tapping-term-ms = <HM_TAPPING_TERM>;
             quick-tap-ms = <175>;                // repeat on tap-into-hold
@@ -152,6 +153,70 @@
         bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
 
         tap-ms = <100>;
+    };
+
+    combos {
+        compatible = "zmk,combos";
+        combo_N0 {
+            timeout-ms = <50>;
+            key-positions = <LM0 LM1>;
+            bindings = <&kp N0>;
+            layers = <0 1 2>;
+        };
+        combo_N1 {
+            timeout-ms = <50>;
+            key-positions = <LT1 LT2>;
+            bindings = <&kp N1>;
+            layers = <0 1 2>;
+        };
+        combo_N2 {
+            timeout-ms = <50>;
+            key-positions = <LM1 LM2>;
+            bindings = <&kp N2>;
+            layers = <0 1 2>;
+        };
+        combo_N3 {
+            timeout-ms = <50>;
+            key-positions = <LB1 LB2>;
+            bindings = <&kp N3>;
+            layers = <0 1 2>;
+        };
+        combo_N4 {
+            timeout-ms = <50>;
+            key-positions = <LT2 LT3>;
+            bindings = <&kp N4>;
+            layers = <0 1 2>;
+        };
+        combo_N5 {
+            timeout-ms = <50>;
+            key-positions = <LM2 LM3>;
+            bindings = <&kp N5>;
+            layers = <0 1 2>;
+        };
+        combo_N6 {
+            timeout-ms = <50>;
+            key-positions = <LB2 LB3>;
+            bindings = <&kp N6>;
+            layers = <0 1 2>;
+        };
+        combo_N7 {
+            timeout-ms = <50>;
+            key-positions = <LT3 LT4>;
+            bindings = <&kp N7>;
+            layers = <0 1 2>;
+        };
+        combo_N8 {
+            timeout-ms = <50>;
+            key-positions = <LM3 LM4>;
+            bindings = <&kp N8>;
+            layers = <0 1 2>;
+        };
+        combo_N9 {
+            timeout-ms = <50>;
+            key-positions = <LB3 LB4>;
+            bindings = <&kp N9>;
+            layers = <0 1 2>;
+        };
     };
 
     keymap {
