@@ -41,6 +41,11 @@
      flavor = "balanced";
 };
 
+// prevents double capitals
+&sk {
+    quick-release;
+};
+
 /*
  * Caps Word Settings
  */
@@ -159,63 +164,69 @@
         compatible = "zmk,combos";
         combo_N0 {
             timeout-ms = <50>;
-            key-positions = <LM0 LM1>;
+            key-positions = <LH0 LM1>;
             bindings = <&kp N0>;
             layers = <0 1 2>;
         };
         combo_N1 {
             timeout-ms = <50>;
-            key-positions = <LT1 LT2>;
+            key-positions = <LT0 LT1>;
             bindings = <&kp N1>;
             layers = <0 1 2>;
         };
         combo_N2 {
             timeout-ms = <50>;
-            key-positions = <LM1 LM2>;
+            key-positions = <LM0 LM1>;
             bindings = <&kp N2>;
             layers = <0 1 2>;
         };
         combo_N3 {
             timeout-ms = <50>;
-            key-positions = <LB1 LB2>;
+            key-positions = <LB0 LB1>;
             bindings = <&kp N3>;
             layers = <0 1 2>;
         };
         combo_N4 {
             timeout-ms = <50>;
-            key-positions = <LT2 LT3>;
+            key-positions = <LT0 LT2>;
             bindings = <&kp N4>;
             layers = <0 1 2>;
         };
         combo_N5 {
             timeout-ms = <50>;
-            key-positions = <LM2 LM3>;
+            key-positions = <LM0 LM2>;
             bindings = <&kp N5>;
             layers = <0 1 2>;
         };
         combo_N6 {
             timeout-ms = <50>;
-            key-positions = <LB2 LB3>;
+            key-positions = <LB0 LB2>;
             bindings = <&kp N6>;
             layers = <0 1 2>;
         };
         combo_N7 {
             timeout-ms = <50>;
-            key-positions = <LT3 LT4>;
+            key-positions = <LT0 LT3>;
             bindings = <&kp N7>;
             layers = <0 1 2>;
         };
         combo_N8 {
             timeout-ms = <50>;
-            key-positions = <LM3 LM4>;
+            key-positions = <LM0 LM3>;
             bindings = <&kp N8>;
             layers = <0 1 2>;
         };
         combo_N9 {
             timeout-ms = <50>;
-            key-positions = <LB3 LB4>;
+            key-positions = <LB0 LB3>;
             bindings = <&kp N9>;
             layers = <0 1 2>;
+        };
+        combo_symbol_layer {
+            timeout-ms = <50>;
+            key-positions = <LT1 LT2>;
+            bindings = <&sl 2>;
+            layers = <0 1>;
         };
     };
 
