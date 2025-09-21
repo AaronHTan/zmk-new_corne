@@ -51,24 +51,24 @@ layers:
   - {t: '$$mdi:backspace$$', h: NUMBER}
   NUMBER:
   - $$mdi:keyboard-tab$$
-  - '!'
-  - '@'
-  - '#'
-  - $
-  - '%'
+  - {t: '-', s: _}
+  - {t: '7', s: '&'}
+  - {t: '4', s: $}
+  - {t: '1', s: '!'}
+  - {t: '-', s: _}
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - ':'
-  - +
-  - '~'
-  - {t: '1', s: '!'}
-  - {t: '2', s: '@'}
-  - {t: '3', s: '#'}
-  - {t: '4', s: $}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '`', s: '~'}
+  - {t: /, s: '?'}
+  - {t: '8', s: '*'}
   - {t: '5', s: '%'}
+  - {t: '2', s: '@'}
+  - {t: '0', s: )}
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - '&mkp MB1'
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
@@ -77,21 +77,21 @@ layers:
   - RGUI
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-control$$
-  - '"'
-  - '|'
-  - {t: '6', s: ^}
-  - {t: '7', s: '&'}
-  - {t: '8', s: '*'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: \, s: '|'}
+  - .
   - {t: '9', s: (}
-  - {t: '0', s: )}
+  - {t: '6', s: ^}
+  - {t: '3', s: '#'}
+  - +
   - PLAY PAUSE
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - <
-  - '>'
-  - '?'
-  - _
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -111,7 +111,7 @@ layers:
   - {t: '=', s: +}
   - '>'
   - {t: ']', s: '}'}
-  - {t: /, s: '?'}
+  - {t: '-', s: _}
   - {t: '`', s: '~'}
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
@@ -126,7 +126,7 @@ layers:
   - ':'
   - )
   - '}'
-  - {t: '-', s: _}
+  - {t: /, s: '?'}
   - {t: \, s: '|'}
   - {t: '''', s: '"'}
   - '"'
